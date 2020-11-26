@@ -22,7 +22,7 @@ public class BulletSpawnerCtrl : MonoBehaviour
 
         // PlayerCtrl를 가진 게임 오브젝트의 transform 컴포넌트를
         // transform으로 접근해서 target에 할당
-        target = FindObjectOfType<PlayerCtrl>().transform;
+        target = FindObjectOfType<AircraftJetController>().transform;
     }
 
     // Update is called once per frame
