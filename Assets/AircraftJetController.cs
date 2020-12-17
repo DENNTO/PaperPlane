@@ -35,4 +35,12 @@ public class AircraftJetController : MonoBehaviour
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Bullet")
+        {
+            Debug.Log("Collition!");
+        }
+    }
 }
