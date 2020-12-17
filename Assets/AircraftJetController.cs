@@ -5,11 +5,12 @@ using UnityEngine;
 public class AircraftJetController : MonoBehaviour
 {
     public int moveSpeed;
+    public GameObject gameOverPanel;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameOverPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class AircraftJetController : MonoBehaviour
     {
         if(other.tag == "Bullet")
         {
-            Debug.Log("Collition!");
+            gameOverPanel.SetActive(true);
         }
     }
 }
