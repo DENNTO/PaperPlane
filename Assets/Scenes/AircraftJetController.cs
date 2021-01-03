@@ -5,6 +5,7 @@ using UnityEngine;
 public class AircraftJetController : MonoBehaviour
 {
     public int moveSpeed;
+    public static bool isGameovered = false;
     public GameObject gameOverPanel;
 
     // Start is called before the first frame update
@@ -41,7 +42,12 @@ public class AircraftJetController : MonoBehaviour
     {
         if(other.tag == "Bullet")
         {
+            //GameObject go = GameObject.FindGameObjectsWithTag("Bullet");
+            //Destroy(go);
+            //Destroy(BulletSpawnerCtrl.bulletPrefab);
+
             gameOverPanel.SetActive(true);
+            isGameovered = true;
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class RestartButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,11 @@ public class StartButton : MonoBehaviour
         
     }
 
-    public void OnClickStart()
+    public void OnClickRestart()
     {
-        SceneManager.LoadScene("MainScene");
+        //SceneManager.LoadScene("MainMenu");
+        //SceneManager.UnloadScene(SceneManager.GetActiveScene());
+        SceneManager.UnloadSceneAsync("MainScene");
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }
